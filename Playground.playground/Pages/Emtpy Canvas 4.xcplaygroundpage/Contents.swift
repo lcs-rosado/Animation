@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 400
-let preferredHeight = 400
+let preferredWidth = 600
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -34,15 +34,54 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
 // Translate the origin to the middle of the canvas
-canvas.translate(to: Point(x: 200, y: 200))
-
+canvas.translate(to: Point(x: 300, y: 300))
 
 //draw a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
+
+//draw the left ear
+canvas.drawEllipse(at: Point(x: -70, y: 230), width: 75, height: 75)
+
+//draw the right ear
+canvas.drawEllipse(at: Point(x: 70, y: 230), width: 75, height: 75)
+
+//draw the face
+canvas.fillColor = .white
+canvas.drawEllipse(at: Point(x: 0, y: 130), width: 250, height: 250)
+
+//draw the left eye
+canvas.fillColor = .black
+canvas.drawEllipse(at: Point(x: -50, y: 170), width: 50, height: 50)
+
+//draw the right eye
+canvas.drawEllipse(at: Point(x: 50, y: 170), width: 50, height: 50)
+
+//draw the left pupil
+canvas.drawShapesWithBorders = false
+canvas.fillColor = .white
+canvas.drawEllipse(at: Point(x: -40, y: 160), width: 20, height: 20)
+canvas.drawEllipse(at: Point(x: 40, y: 160), width: 20, height: 20)
+
+//draw the nose
+canvas.fillColor = .black
+canvas.drawEllipse(at: Point(x: 0, y: 120), width: 50, height: 25)
+
+//nose detail
+canvas.fillColor = .white
+canvas.drawEllipse(at: Point(x: 10, y: 127), width: 20, height: 10)
+canvas.drawLine(from: Point(x: 0, y: 120),
+                to: Point(x: 0, y: 90))
+canvas.drawLine(from: Point(x: 0, y: 90),
+                to: Point(x: -20, y: 90))
+canvas.drawLine(from: Point(x: 0, y: 90),
+                to: Point(x: 20, y: 90))
+canvas.drawLine(from: Point(x: -20, y: 90),
+                to: Point(x: -20, y: 95))
+canvas.drawLine(from: Point(x: 20, y: 90), to: Point(x: 20, y: 95))
+
+//draw body
 
 /*:
  ## Show the Live View

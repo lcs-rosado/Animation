@@ -3,8 +3,13 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/santiagrosado/Documents/Playgrounds/Animation/Playground.playground/Pages/Introduction.xcplaygroundpage#CharacterRangeLen=307&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=12&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=663780846.541742"
+         documentLocation = "file:///Users/santiagrosado/Documents/Playgrounds/Animation/Playground.playground/Pages/Introduction.xcplaygroundpage#CharacterRangeLen=570&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=25&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=664380934.175891"
          selectedRepresentationIndex = "1"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/santiagrosado/Documents/Playgrounds/Animation/Playground.playground/Pages/Introduction.xcplaygroundpage#CharacterRangeLen=18&amp;CharacterRangeLoc=385&amp;EndingColumnNumber=0&amp;EndingLineNumber=17&amp;StartingColumnNumber=5&amp;StartingLineNumber=16&amp;Timestamp=664380934.176049"
+         selectedRepresentationIndex = "2"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
    </TimelineItems>
