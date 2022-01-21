@@ -82,6 +82,22 @@ canvas.drawLine(from: Point(x: -20, y: 90),
 canvas.drawLine(from: Point(x: 20, y: 90), to: Point(x: 20, y: 95))
 
 //draw body
+canvas.drawShapesWithBorders = true
+canvas.drawEllipse(at: Point(x: 0, y: -98), width: 250, height: 205)
+
+//draw left hand
+canvas.fillColor = .black
+canvas.drawEllipse(at: Point(x: -90, y: -30), width: 50, height: 50)
+
+//draw right hand
+canvas.drawEllipse(at: Point(x: 90, y: -30), width: 50, height: 50)
+
+//draw left foot
+canvas.drawEllipse(at: Point(x: -80, y: -180), width: 50, height: 50)
+
+//draw right foot
+canvas.drawEllipse(at: Point(x: 80, y: -180), width: 50, height: 50)
+
 
 /*:
  ## Show the Live View
