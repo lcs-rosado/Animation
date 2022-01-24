@@ -44,6 +44,85 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 canvas.drawAxes(withScale: true, by: 50, color: .white)
 
+
+canvas.borderColor = .white
+canvas.defaultBorderWidth = 5
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 20, height: 20)
+
+
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 40, height: 40)
+canvas
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 20, height: 20)
+
+
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 40, height: 40)
+
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 60, height: 60)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 80, height: 80)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height: 100)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 120, height: 120)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 140, height: 140)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 160, height: 160)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 180, height: 180)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 200, height: 200)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 220, height: 220)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 240, height: 240)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 260, height: 260)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 280, height: 280)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 300, height: 300)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 320, height: 320)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 340, height: 340)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 360, height: 360)
+
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 380, height: 380)
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*:
  ## Show the Live View
  Don't see any results?
