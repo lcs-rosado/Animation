@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 400
+let preferredHeight = 400
 /*:
  ## Required code
  
@@ -35,82 +35,18 @@ PlaygroundPage.current.liveView = canvas
  */
 
 
-// Translate the origin to the middle of the canvas
-canvas.translate(to: Point(x: 300, y: 300))
-
-//draw a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
-
-//draw the left ear
-canvas.drawEllipse(at: Point(x: -70, y: 230), width: 75, height: 75)
-
-//draw the right ear
-canvas.drawEllipse(at: Point(x: 70, y: 230), width: 75, height: 75)
-
-//draw the face
-canvas.fillColor = .white
-canvas.drawEllipse(at: Point(x: 0, y: 130), width: 250, height: 250)
-
-//draw the left eye
-canvas.fillColor = .black
-canvas.drawEllipse(at: Point(x: -50, y: 170), width: 50, height: 50)
-
-//draw the right eye
-canvas.drawEllipse(at: Point(x: 50, y: 170), width: 50, height: 50)
-
-//draw the left pupil
-canvas.drawShapesWithBorders = false
-canvas.fillColor = .white
-canvas.drawEllipse(at: Point(x: -40, y: 160), width: 20, height: 20)
-canvas.drawEllipse(at: Point(x: 40, y: 160), width: 20, height: 20)
-
-//draw the nose
-canvas.fillColor = .black
-canvas.drawEllipse(at: Point(x: 0, y: 120), width: 50, height: 25)
-
-//nose detail
-canvas.fillColor = .white
-canvas.drawEllipse(at: Point(x: 10, y: 127), width: 20, height: 10)
-canvas.drawLine(from: Point(x: 0, y: 120),
-                to: Point(x: 0, y: 90))
-canvas.drawLine(from: Point(x: 0, y: 90),
-                to: Point(x: -20, y: 90))
-canvas.drawLine(from: Point(x: 0, y: 90),
-                to: Point(x: 20, y: 90))
-canvas.drawLine(from: Point(x: -20, y: 90),
-                to: Point(x: -20, y: 95))
-canvas.drawLine(from: Point(x: 20, y: 90), to: Point(x: 20, y: 95))
-
-//draw body
-canvas.drawShapesWithBorders = true
-canvas.drawEllipse(at: Point(x: 0, y: -98), width: 250, height: 205)
-
-//draw left hand
-canvas.fillColor = .black
-canvas.drawEllipse(at: Point(x: -90, y: -30), width: 50, height: 50)
-
-//draw right hand
-canvas.drawEllipse(at: Point(x: 90, y: -30), width: 50, height: 50)
-
-//draw left foot
-canvas.drawEllipse(at: Point(x: -80, y: -180), width: 50, height: 50)
-
-//draw right foot
-canvas.drawEllipse(at: Point(x: 80, y: -180), width: 50, height: 50)
+//Top rectangle's
+canvas.drawShapesWithFill = false
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
+canvas.drawRectangle(at: Point(x: 60, y: 180), width: 120, height: 140, anchoredBy: AnchorPosition.bottomLeft, borderWidth: 40)
+canvas.drawAxes(withScale: true, by: 10, color: .blue)
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
+canvas.drawRectangle(at: Point(x:60, y: 180), width: 120, height: 140)
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
+canvas.drawRectangle(at: Point(x:100, y: 120), width: 120, height: 140)
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
+canvas.drawRectangle(at: Point(x:180, y: 80), width: 120, height: 140)
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
+canvas.drawRectangle(at: Point(x:260, y: 40), width: 120, height: 140)
 
 
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
-
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
