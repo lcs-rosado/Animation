@@ -37,16 +37,19 @@ PlaygroundPage.current.liveView = canvas
 
 //Top rectangle's
 canvas.drawShapesWithFill = false
-canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
-canvas.drawRectangle(at: Point(x: 60, y: 180), width: 120, height: 140, anchoredBy: AnchorPosition.bottomLeft, borderWidth: 40)
-canvas.drawAxes(withScale: true, by: 10, color: .blue)
-canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
-canvas.drawRectangle(at: Point(x:60, y: 180), width: 120, height: 140)
-canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
-canvas.drawRectangle(at: Point(x:100, y: 120), width: 120, height: 140)
-canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
-canvas.drawRectangle(at: Point(x:180, y: 80), width: 120, height: 140)
-canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 75)
-canvas.drawRectangle(at: Point(x:260, y: 40), width: 120, height: 140)
+canvas.defaultBorderWidth = 20
 
+canvas.borderColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 60, y: 160), width: 120, height: 140)
+
+canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 100, y: 120), width: 120, height: 140)
+
+canvas.borderColor = Color(hue: 0, saturation: 70, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 140, y: 80), width: 120, height: 140)
+
+canvas.borderColor = Color(hue: 0, saturation: 60, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 180, y: 40), width: 120, height: 140)
+
+canvas.drawAxes(withScale: true, by: 10, color: .blue)
 
