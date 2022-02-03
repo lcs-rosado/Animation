@@ -40,6 +40,37 @@ PlaygroundPage.current.liveView = canvas
 canvas.fillColor = .white
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+//circle grid background
+canvas.drawShapesWithFill = true
+canvas.fillColor = .black
+
+for xcircleOrigin in stride(from: 0, through: 400, by: 50) {
+    for ycircleOrigin in stride(from: 0, through: 600, by: 50){
+        
+        canvas.drawEllipse(at: Point(x: xcircleOrigin, y: ycircleOrigin), width: 50, height: 50)
+        
+    }
+}
+
+canvas.fillColor = .white
+canvas.drawRectangle(at: Point(x: 40, y: 180), width: 340, height: 340)
+
+//Top rectangle's
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 20
+
+canvas.borderColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 60, y: 200), width: 300, height: 300)
+
+canvas.borderColor = Color(hue: 0, saturation: 70, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 80, y: 220), width: 260, height: 260)
+
+canvas.borderColor = Color(hue: 0, saturation: 50, brightness: 100, alpha: 50)
+canvas.drawRectangle(at: Point(x: 100, y: 240), width: 220, height: 220)
+
+canvas.lineColor = .black
+
 
 /*:
  ## Show the Live View
