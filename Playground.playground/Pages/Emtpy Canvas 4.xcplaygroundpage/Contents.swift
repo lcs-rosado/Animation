@@ -5,7 +5,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 400
-let preferredHeight = 400
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -33,9 +33,12 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+//black background
+canvas.drawShapesWithFill = true
+canvas.fillColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
-//Top rectangle's
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 20
 
@@ -43,13 +46,15 @@ canvas.borderColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 50)
 canvas.drawRectangle(at: Point(x: 60, y: 160), width: 120, height: 140)
 
 canvas.borderColor = Color(hue: 0, saturation: 80, brightness: 100, alpha: 50)
-canvas.drawRectangle(at: Point(x: 100, y: 120), width: 120, height: 140)
+canvas.drawRectangle(at: Point(x: 90, y: 130), width: 120, height: 140)
 
 canvas.borderColor = Color(hue: 0, saturation: 70, brightness: 100, alpha: 50)
-canvas.drawRectangle(at: Point(x: 140, y: 80), width: 120, height: 140)
+canvas.drawRectangle(at: Point(x: 120, y: 100), width: 120, height: 140)
 
 canvas.borderColor = Color(hue: 0, saturation: 60, brightness: 100, alpha: 50)
 canvas.drawRectangle(at: Point(x: 180, y: 40), width: 120, height: 140)
 
 canvas.drawAxes(withScale: true, by: 10, color: .blue)
 
+// Draw the text
+canvas.drawText(message: <#T##String#>, at: <#T##Point#>, size: <#T##Int#>, kerning: <#T##Float#>)

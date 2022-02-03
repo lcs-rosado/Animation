@@ -45,7 +45,7 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 canvas.drawAxes(withScale: true, by: 50, color: .white)
 
 
-canvas.borderColor = .white
+canvas.borderColor = .white50
 canvas.defaultBorderWidth = 5
 canvas.drawShapesWithFill = false
 canvas.drawShapesWithBorders = true
