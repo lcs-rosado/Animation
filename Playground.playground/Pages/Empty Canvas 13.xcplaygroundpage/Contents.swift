@@ -16,7 +16,6 @@ let preferredHeight = 600
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
-import CoreImage
 
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
@@ -57,7 +56,7 @@ for xcircleOrigin in stride(from: 0, through: 400, by: 50) {
 canvas.fillColor = .white
 canvas.drawRectangle(at: Point(x: 40, y: 180), width: 340, height: 340)
 
-//Top rectangle's
+// White Rectangle
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 20
@@ -82,9 +81,10 @@ canvas.lineColor
 // Draw Text message
 canvas.drawText(message: "Soda Stereo", at: Point(x: 120, y: 330),size: 30, kerning: 0)
 
-canvas.drawText(message: "Nov 15, 2007", at: Point(x: 120, y: 260), size: 10, kerning: 0)
+canvas.drawText(message: "Nov 15 2007", at: Point(x: 120, y: 260),size: 10, kerning: 0)
 
-canvas.drawText(message: "Foro Sol Mexico,CDMX", at: Point(x: 190, y: 260), size: 10, kerning: 0)
+
+canvas.drawText(message: "Foro Sol Mexico,CDMX", at: Point(x: 190 , y: 260),size: 10, kerning: 0)
 
 
 /*:

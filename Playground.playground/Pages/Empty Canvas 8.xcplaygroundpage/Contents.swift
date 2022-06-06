@@ -16,12 +16,13 @@ let preferredHeight = 600
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
+import AppKit
 
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Create a turtle that will draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -36,21 +37,42 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+canvas.translate(to: Point(x: 100, y: 100))
 
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
+// show grid
 
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+canvas.drawAxes(withScale: true, by: 20, color: .black)
+
+
+// Constants
+let scale = 20
+let diagonal = Int(sqrt(2.0)*Double(scale))
+
+
+
+//get pen in position
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.penDown()
+
+
+
+//Start Drawing
+t.penDown()
+t.forward(steps: 60)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.left(by: 45)
+t.forward(steps: diagonal*2)
+t.left(by: 90)
+t.forward(steps: diagonal*2)
+t.left(by: 45)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 60)
+t.left(by: 90)
+t.forward(steps: 40)
