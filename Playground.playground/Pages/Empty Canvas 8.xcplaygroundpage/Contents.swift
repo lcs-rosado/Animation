@@ -59,20 +59,31 @@ t.penDown()
 
 
 
+//Functions
+
+func drawArrow()  {
+    t.penDown()
+    t.forward(steps: 3 * scale)
+    t.right(by: 90)
+    t.forward(steps: 1 * scale)
+    t.left(by: 90)
+    t.left(by: 45)
+    t.forward(steps: diagonal * 2)
+    t.left(by: 90)
+    t.forward(steps: diagonal * 2)
+    t.left(by: 45)
+    t.left(by: 90)
+    t.forward(steps: 1 * scale)
+    t.right(by: 90)
+    t.forward(steps: 3 * scale)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale)
+    t.left(by: 90)
+
+}
+
+
 //Start Drawing
-t.penDown()
-t.forward(steps: 60)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.left(by: 45)
-t.forward(steps: diagonal*2)
-t.left(by: 90)
-t.forward(steps: diagonal*2)
-t.left(by: 45)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 60)
-t.left(by: 90)
-t.forward(steps: 40)
+t.drawSelf()
+drawArrow()
+t.drawSelf()
