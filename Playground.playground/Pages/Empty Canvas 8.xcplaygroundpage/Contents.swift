@@ -83,7 +83,19 @@ func drawArrow()  {
 }
 
 
-//Start Drawing
-t.drawSelf()
-drawArrow()
-t.drawSelf()
+
+for _ in 1...5 {
+    //Start Drawing
+    t.drawSelf()
+    drawArrow()
+    t.drawSelf()
+
+    // get into position to draw the next arrow
+    t.penUp()
+    t.forward(steps: 5 * scale)
+    t.penDown()
+
+    
+}
+
+
