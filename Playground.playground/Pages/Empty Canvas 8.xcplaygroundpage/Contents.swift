@@ -45,7 +45,7 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 
 // Constants
-let scale = 20
+let scale = 10
 let diagonal = Int(sqrt(2.0)*Double(scale))
 
 
@@ -83,11 +83,15 @@ func drawArrow()  {
 }
 
 
+let columnCount = 10
+let rowCount = 12
+canvas.highPerformance = true
+
 //Draw many rows of arrows
-for rows in 1...6 {
+for _ in 1...rowCount {
     
     // Draw one row of arrows
-    for columns in 1...5 {
+    for _ in 1...columnCount {
         //Start Drawing
     //    t.drawSelf()
         drawArrow()
@@ -104,7 +108,7 @@ for rows in 1...6 {
     //Get pen into drawing position for the next row
     t.penUp()
     t.left(by: 180)
-    t.forward(steps: 5 * 5 * scale)
+    t.forward(steps: 5 * columnCount * scale)
     t.right(by: 90)
     t.forward(steps: 4 * scale)
     t.right(by: 90)
@@ -115,3 +119,4 @@ for rows in 1...6 {
 }
 
 
+canvas.highPerformance = false
