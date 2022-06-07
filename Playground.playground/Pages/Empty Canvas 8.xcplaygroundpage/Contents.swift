@@ -83,40 +83,34 @@ func drawArrow()  {
 }
 
 
-
-for _ in 1...5 {
-    //Start Drawing
-//    t.drawSelf()
-    drawArrow()
-//    t.drawSelf()
-
-    // get into position to draw the next arrow
-    t.penUp()
-    t.forward(steps: 5 * scale)
-    t.penDown()
-
+//Draw many rows of arrows
+for rows in 1...6 {
     
-}
+    // Draw one row of arrows
+    for columns in 1...5 {
+        //Start Drawing
+    //    t.drawSelf()
+        drawArrow()
+    //    t.drawSelf()
 
-//Get pen into drawing position for the next row
-t.penUp()
-t.left(by: 180)
-t.forward(steps: 5 * 5 * scale)
-t.right(by: 90)
-t.forward(steps: 4 * scale)
-t.right(by: 90)
-t.penDown()
+        // get into position to draw the next arrow
+        t.penUp()
+        t.forward(steps: 5 * scale)
+        t.penDown()
 
+        
+    }
 
-for _ in 1 ... 5{
-
-//    t.drawSelf()
-    drawArrow()
-//    t.drawSelf()
-
+    //Get pen into drawing position for the next row
     t.penUp()
-    t.forward(steps: 5 * scale)
+    t.left(by: 180)
+    t.forward(steps: 5 * 5 * scale)
+    t.right(by: 90)
+    t.forward(steps: 4 * scale)
+    t.right(by: 90)
     t.penDown()
+
+
     
 }
 
