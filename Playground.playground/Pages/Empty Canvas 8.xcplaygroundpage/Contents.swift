@@ -86,15 +86,37 @@ func drawArrow()  {
 
 for _ in 1...5 {
     //Start Drawing
-    t.drawSelf()
+//    t.drawSelf()
     drawArrow()
-    t.drawSelf()
+//    t.drawSelf()
 
     // get into position to draw the next arrow
     t.penUp()
     t.forward(steps: 5 * scale)
     t.penDown()
 
+    
+}
+
+//Get pen into drawing position for the next row
+t.penUp()
+t.left(by: 180)
+t.forward(steps: 5 * 5 * scale)
+t.right(by: 90)
+t.forward(steps: 4 * scale)
+t.right(by: 90)
+t.penDown()
+
+
+for _ in 1 ... 5{
+
+//    t.drawSelf()
+    drawArrow()
+//    t.drawSelf()
+
+    t.penUp()
+    t.forward(steps: 5 * scale)
+    t.penDown()
     
 }
 
