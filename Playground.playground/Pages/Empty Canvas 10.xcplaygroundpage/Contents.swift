@@ -49,7 +49,7 @@ t.forward(steps: 1*scale)
 t.right(by: 90)
 t.penUp()
 
-//DRaw first square
+//Draw first square
 t.drawSelf()
 
 t.penDown()
@@ -124,6 +124,7 @@ t.right(by: 260)
 
 
 
+
 t.currentPosition()
 
 // get turtle back to where it started
@@ -134,7 +135,7 @@ t.drawSelf()
 
 
 
-
+letcolum
 
 
 
