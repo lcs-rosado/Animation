@@ -20,24 +20,128 @@ import CanvasGraphics
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
+// move origin in a bit
+canvas.translate(to: Point(x: 100, y: 100))
+
 // Create a turtle that will draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
+
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
-/*:
- ## Add your code
- 
- Beginning on line 48, write a meaningful comment.
- 
- You can remove the code on line 49 and begin writing your own code.
- 
- [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
- */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+
+
+canvas.drawAxes(withScale: true, by: 10, color: .black)
+
+
+// Constants
+let scale = 20
+let diagonal = Int(sqrt(2.0)*Double(scale))
+
+
+
+//get pen in position
+t.penDown()
+t.left(by: 90)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.penUp()
+
+//DRaw first square
+t.drawSelf()
+
+t.penDown()
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+
+//get pen back into position
+
+t.penUp()
+t.right(by: -90)
+t.forward(steps: 5*scale)
+t.penDown()
+
+//Draw second Square
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+t.right(by: -90)
+t.forward(steps: 5*scale)
+
+
+//Get the pen back into position
+t.penUp()
+t.right(by: 90)
+t.backward(steps: 5*scale)
+t.forward(steps: 10*scale)
+t.right(by: 90)
+
+
+//First inner square
+
+t.penDown()
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: -90)
+t.forward(steps: 2*scale)
+t.right(by: -90)
+t.forward(steps: 2*scale)
+t.penUp()
+
+//Second inner square
+
+t.right(by: 180)
+t.forward(steps: 5*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
+t.penDown()
+t.right(by: -90)
+t.forward(steps: 2*scale)
+t.right(by: -90)
+t.forward(steps: 2*scale)
+t.right(by: -90)
+t.forward(steps: 2*scale)
+t.penUp()
+
+// Get pen into position
+t.right(by: 180)
+t.backward(steps: 5*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
+t.right(by: 260)
+
+
+
+
+
+t.currentPosition()
+
+// get turtle back to where it started
+    
+
+
+t.drawSelf()
+
+
+
+
+
+
+
+
+
+
+
 
 /*:
  ## Show the Live View

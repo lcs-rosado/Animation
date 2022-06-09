@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Create a turtle that will draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -38,6 +38,16 @@ PlaygroundPage.current.liveView = canvas
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+
+
+
+
+
+// show grid
+
+canvas.drawAxes(withScale: true, by: 20, color: .black)
+t.penDown()
+
 
 /*:
  ## Show the Live View
