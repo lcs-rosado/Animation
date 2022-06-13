@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // move origin in a bit
-canvas.translate(to: Point(x: 100, y: 100))
+canvas.translate(to: Point(x: 100, y: 200))
 
 // Create a turtle that will draw upon the canvas
 let t = Tortoise(drawingUpon: canvas)
@@ -36,106 +36,136 @@ PlaygroundPage.current.liveView = canvas
 canvas.drawAxes(withScale: true, by: 10, color: .black)
 
 
+canvas.highPerformance = true
+
 // Constants
 let scale = 20
 let diagonal = Int(sqrt(2.0)*Double(scale))
 
-
-
-//get pen in position
+//Move to start pos
 t.penDown()
 t.left(by: 90)
 t.forward(steps: 1*scale)
 t.right(by: 90)
 t.penUp()
 
-//Draw first square
-t.drawSelf()
+// Function to draw my pattern
+func drawsquare () {
+  
 
-t.penDown()
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
+    //Draw first square
+    t.drawSelf()
 
-//get pen back into position
+    t.penDown()
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
 
-t.penUp()
-t.right(by: -90)
-t.forward(steps: 5*scale)
-t.penDown()
+    //get pen back into position
 
-//Draw second Square
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
-t.right(by: -90)
-t.forward(steps: 5*scale)
+    t.penUp()
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
+    t.penDown()
 
-
-//Get the pen back into position
-t.penUp()
-t.right(by: 90)
-t.backward(steps: 5*scale)
-t.forward(steps: 10*scale)
-t.right(by: 90)
+    //Draw second Square
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
+    t.left(by: 90)
+    t.forward(steps: 5*scale)
 
 
-//First inner square
-
-t.penDown()
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: -90)
-t.forward(steps: 2*scale)
-t.right(by: -90)
-t.forward(steps: 2*scale)
-t.penUp()
-
-//Second inner square
-
-t.right(by: 180)
-t.forward(steps: 5*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
-t.penDown()
-t.right(by: -90)
-t.forward(steps: 2*scale)
-t.right(by: -90)
-t.forward(steps: 2*scale)
-t.right(by: -90)
-t.forward(steps: 2*scale)
-t.penUp()
-
-// Get pen into position
-t.right(by: 180)
-t.backward(steps: 5*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
-t.right(by: 260)
+    //Get the pen back into position
+    t.penUp()
+    t.right(by: 90)
+    t.backward(steps: 5*scale)
+    t.forward(steps: 10*scale)
+    t.right(by: 90)
 
 
+    //First inner square
 
+    t.penDown()
+    t.forward(steps: 2*scale)
+    t.right(by: 90)
+    t.forward(steps: 2*scale)
+    t.right(by: -90)
+    t.forward(steps: 2*scale)
+    t.right(by: -90)
+    t.forward(steps: 2*scale)
+    t.penUp()
 
+    //Second inner square
 
+    t.right(by: 180)
+    t.forward(steps: 5*scale)
+    t.right(by: 90)
+    t.forward(steps: 3*scale)
+    t.penDown()
+    t.left(by: 90)
+    t.forward(steps: 2*scale)
+    t.left(by: 90)
+    t.forward(steps: 2*scale)
+    t.left(by: 90)
+    t.forward(steps: 2*scale)
+    t.penUp()
+
+    
+ }
 
 t.currentPosition()
+t.drawSelf()
 
-// get turtle back to where it started
+
+// Make a function for moving the pattern up
+func movepatternUp() {
+    
+    t.penUp()
+    t.forward(steps: scale*15)
+    t.right(by: 90)
+    t.forward(steps: scale*2)
+    t.right(by: 90)
+    t.penDown()
+    t.drawSelf()
+    
+    
+}
+
+
+
+// Loop function to make multiple rows of it
+for _ in 1 ... 3 {
+    for _ in 1 ... 3 {
+        
+        drawsquare()
+        t.drawSelf()
+        t.penUp()
+        t.backward(steps: scale*5)
+        t.left(by: 90)
+        t.forward(steps: scale*3)
+        t.left(by: 90)
+        t.penUp()
+        t.drawSelf()
+        
+    }
+      movepatternUp()
+        
+}
+    
+canvas.highPerformance = false
     
 
 
-t.drawSelf()
 
 
 
-letcolum
 
 
 
