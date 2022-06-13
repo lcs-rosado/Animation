@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
+let preferredWidth = 800
 let preferredHeight = 600
 /*:
  ## Required code
@@ -42,7 +42,7 @@ canvas.highPerformance = true
 let scale = 20
 let diagonal = Int(sqrt(2.0)*Double(scale))
 
-//Move to start pos
+//Move to start position
 t.penDown()
 t.left(by: 90)
 t.forward(steps: 1*scale)
@@ -54,7 +54,7 @@ func drawsquare () {
   
 
     //Draw first square
-    t.drawSelf()
+    //t.drawSelf()
 
     t.penDown()
     t.forward(steps: 5*scale)
@@ -124,7 +124,7 @@ t.currentPosition()
 t.drawSelf()
 
 
-// Make a function for moving the pattern up
+// Make a function moving the pattern up
 func movepatternUp() {
     
     t.penUp()
@@ -133,29 +133,34 @@ func movepatternUp() {
     t.forward(steps: scale*2)
     t.right(by: 90)
     t.penDown()
-    t.drawSelf()
+//    t.drawSelf()
     
     
 }
 
 
-
 // Loop function to make multiple rows of it
-for _ in 1 ... 3 {
+for _ in 1 ... 1 {
+    // Gets one row
     for _ in 1 ... 3 {
         
         drawsquare()
-        t.drawSelf()
+//        t.drawSelf()
         t.penUp()
         t.backward(steps: scale*5)
         t.left(by: 90)
         t.forward(steps: scale*3)
         t.left(by: 90)
         t.penUp()
-        t.drawSelf()
+//        t.drawSelf()
         
     }
-      movepatternUp()
+
+    t.drawSelf()
+    t.currentPosition()
+    movepatternUp()
+    t.drawSelf()
+    t.currentPosition()
         
 }
     
