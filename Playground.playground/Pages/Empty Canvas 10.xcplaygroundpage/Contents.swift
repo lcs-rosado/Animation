@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // move origin in a bit
-canvas.translate(to: Point(x: 100, y: 200))
+canvas.translate(to: Point(x: 100, y: 100))
 
 // Create a turtle that will draw upon the canvas
 let t = Tortoise(drawingUpon: canvas)
@@ -33,7 +33,7 @@ PlaygroundPage.current.liveView = canvas
 
 
 
-canvas.drawAxes(withScale: true, by: 10, color: .black)
+canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 
 canvas.highPerformance = true
@@ -128,9 +128,9 @@ t.drawSelf()
 func movepatternUp() {
     
     t.penUp()
-    t.forward(steps: scale*15)
-    t.right(by: 90)
-    t.forward(steps: scale*2)
+    t.backward(steps: scale*5*6)
+    t.left(by: 90)
+    t.forward(steps: scale*5)
     t.right(by: 90)
     t.penDown()
 //    t.drawSelf()
@@ -140,7 +140,7 @@ func movepatternUp() {
 
 
 // Loop function to make multiple rows of it
-for _ in 1 ... 1 {
+for _ in 1 ... 5 {
     // Gets one row
     for _ in 1 ... 3 {
         
@@ -152,7 +152,7 @@ for _ in 1 ... 1 {
         t.forward(steps: scale*3)
         t.left(by: 90)
         t.penUp()
-//        t.drawSelf()
+        
         
     }
 
