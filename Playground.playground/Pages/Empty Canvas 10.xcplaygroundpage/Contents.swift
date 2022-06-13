@@ -39,7 +39,7 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 canvas.highPerformance = true
 
 // Constants
-let scale = 20
+let scale = 5
 let diagonal = Int(sqrt(2.0)*Double(scale))
 
 //Move to start position
@@ -128,7 +128,7 @@ t.drawSelf()
 func movepatternUp() {
     
     t.penUp()
-    t.backward(steps: scale*5*6)
+    t.backward(steps: scale*5*18)
     t.left(by: 90)
     t.forward(steps: scale*5)
     t.right(by: 90)
@@ -140,9 +140,9 @@ func movepatternUp() {
 
 
 // Loop function to make multiple rows of it
-for _ in 1 ... 5 {
+for _ in 1 ... 15 {
     // Gets one row
-    for _ in 1 ... 3 {
+    for _ in 1 ... 9 {
         
         drawsquare()
 //        t.drawSelf()
@@ -156,10 +156,10 @@ for _ in 1 ... 5 {
         
     }
 
-    t.drawSelf()
+//    t.drawSelf()
     t.currentPosition()
     movepatternUp()
-    t.drawSelf()
+//    t.drawSelf()
     t.currentPosition()
         
 }
